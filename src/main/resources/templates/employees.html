@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title>im test page</title>
+</head>
+<body>
+<div>
+    <table style="margin-left:40%;">
+        <tr th:each="employee: ${employees}">
+            <td th:text= "${employee.id}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.age}"></td>
+            <td th:text="${employee.gender}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
