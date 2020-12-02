@@ -1,9 +1,16 @@
 package com.thoughtworks.springbootemployee.entity;
 
-import javax.persistence.*;
+import com.thoughtworks.springbootemployee.listener.EmployeeListener;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "employee")
+@EntityListeners(EmployeeListener.class)
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
